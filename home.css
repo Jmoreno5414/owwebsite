@@ -1,3 +1,12 @@
+html, body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative; 
+    z-index: -2;
+}
+
 @keyframes fade-coming-up {
     from {
         opacity: 0;
@@ -20,7 +29,7 @@
     }
     75% {
         opacity: 1;
-        transform: translateY(5px);
+        transform: translateY(10px);
     }
     100% {
         transform: translateY(0px);
@@ -40,6 +49,8 @@
 
 
 .background-img {
+    opacity: 0;
+    animation: fade-in 5s ease-in 2s forwards;
     position: absolute;
     top: 0;
     left: 0;
@@ -55,7 +66,7 @@
     align-items: flex-start;
     flex-direction: column;
     margin-left: 80px;
-    margin-top: 130px;
+    margin-top: 110px;
 
 }
 
@@ -67,12 +78,14 @@
 }
 
 .ow-motto h2 {
-    padding: 5px;
-    font-size: 40px;
     opacity: 0;
+    padding: 10px;
+    font-size: 40px;
+   
 }
 .ow-motto h3 {
     padding: 5px;
+    font-size: 40px;
 }
 
 
@@ -88,12 +101,45 @@
 .motto3 {
     animation: fade-coming-up-bounce .5s ease-in 1.0s forwards;
 }
-.motto4 {
+.make-text {
+    opacity: 0;
+    display: inline-block;
     animation: fade-coming-up-bounce .5s ease-in 1.5s forwards;
+}
+.letter-A {
+    opacity: 0;
+    display: inline-block;
+    animation: fade-coming-up-bounce .5s ease-in 2.0s forwards;
 }
 
 .difference-text {
     opacity: 0;
-    animation: fade-in .5s ease-in 2.0s forwards;
-    color: rgb(1, 123, 220);
+    display: inline-block;
+    animation: fade-in .5s ease-in 2.5s forwards;
+    color: rgb(212 175 55);
+}
+
+.ow-motto h4 {
+    display: inline-block;
+    opacity: 0;
+    animation: fade-in 1s ease-in 4s forwards;
+    font-size: 24px;
+}
+
+.join-us-button {
+    opacity: 0;
+    display: inline-block;
+    height: 60px;
+    width: 250px;
+    margin-top: 40px;
+    background-color: rgb(1, 123, 220);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    animation: fade-coming-up-bounce 1s ease-in 4.1s forwards;
+    
+    
 }
