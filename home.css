@@ -65,8 +65,8 @@ html, body {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-left: 80px;
-    margin-top: 110px;
+    margin-left: 5%;
+    margin-top: 7%;
 
 }
 
@@ -131,6 +131,7 @@ html, body {
     display: inline-block;
     height: 60px;
     width: 250px;
+    margin-left: 15px;
     margin-top: 40px;
     background-color: rgb(1, 123, 220);
     border: none;
