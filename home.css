@@ -70,9 +70,6 @@ html, body {
 
 }
 
-
-
-
 .ow-motto > * {
     margin: 0;
 }
@@ -128,7 +125,6 @@ html, body {
 
 .join-us-button {
     opacity: 0;
-    display: inline-block;
     height: 60px;
     width: 250px;
     margin-left: 15px;
@@ -137,10 +133,15 @@ html, body {
     border: none;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 26.5px !important;
+    text-align: center;
     font-weight: bold;
     color: white;
     animation: fade-coming-up-bounce 1s ease-in 4.1s forwards;
     
     
+}
+
+.ow-motto a {
+    text-decoration: none;
 }

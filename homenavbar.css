@@ -45,6 +45,9 @@
     animation: fade-coming-up-bounce 1s ease-in 4s forwards;
 
 }
+.logo-and-text:hover {
+    transform: scale(1.2);
+}
 .oneway-text {
     font-size: 45px;
 
@@ -118,35 +121,6 @@
     transform: scale(1.2);
     color: gray;
 }
-
-/* .about {
-    opacity: 0;
-    animation: fade-coming-up-bounce 1s ease-in 4.0s forwards;
-}
-.ministries {
-    opacity: 0;
-    animation: fade-coming-up-bounce 1s ease-in 4.1s forwards;
-}
-.events {
-    opacity: 0;
-    animation: fade-coming-up-bounce 1s ease-in 4.2s forwards;
-}
-.sermons {
-    opacity: 0;
-    animation: fade-coming-up-bounce 1s ease-in 4.3s forwards;
-}
-.contact {
-    opacity: 0;
-    animation: fade-coming-up-bounce 1s ease-in 4.4s forwards;
-}
-.nextGen{ 
-    opacity: 0;
-    background-color: rgb(1, 123, 220);
-    border-radius: 7px;
-    margin-left: 15px;
-    animation: fade-coming-up-bounce 1s ease-in 4.5s forwards;
-} */
-
 
 
 .about {
