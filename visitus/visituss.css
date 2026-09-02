@@ -1,0 +1,264 @@
+@import url('https://googleapis.com');
+@keyframes come-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    80% {
+        transform: translateX(2%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade-coming-up-bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    50% {
+        
+        transform: translateY(-5px);
+    }
+    75% {
+        
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes rise {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    60% {
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+body {
+    background-color: black;
+}
+
+.church-back {
+    position: absolute;
+    top: 0%;
+    left: 35%;
+    width: 70%;
+    height: 50%;
+    object-fit: cover;
+    z-index: -1;   
+    object-position: 0% 20%;
+
+    -webkit-mask-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(0,0,0) 15%, rgb(0,0,0) 85%, rgba(0,0,0,0) 90%),
+    linear-gradient(to right,  rgba(0,0,0,0) 0%, rgb(0,0,0) 15%, rgb(0,0,0) 85%, rgba(0,0,0,0) 50%);
+    mask-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(0,0,0) 25%, rgb(0,0,0) 95%, rgba(0,0,0,0) 100%),
+    linear-gradient(to right,  rgba(0,0,0,0) 0%, rgb(0,0,0) 25%, rgb(0,0,0) 92%, rgba(0,0,0,0) 100%);
+    -webkit-mask-composite: destination-in;
+     mask-composite: intersect;
+
+     animation: rise 2s ease-in;
+}
+
+
+.top-text {
+    color: white;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    animation: come-from-left 2s ease-in;
+}
+
+.top-text > * {
+    margin:0;
+}
+
+.top-text h1 {
+    font-size: 105px;
+    
+}
+.top-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 550px;
+    line-height: 30px;
+}
+
+.top-text-bio {
+    margin-bottom: 50px;
+}
+
+.middlebox h2, h3 {
+    color: white;
+}
+
+
+/* .mini-images {
+    filter: invert(1);
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+} */
+
+.mleft {
+    margin-left: 5%;
+}
+.clock-icon, .pin-icon{
+    width: 70px;
+    height: 70px;
+    filter: invert(1);
+
+}
+
+.car-icon {
+    width: 60px;
+    height: 40px;
+    filter: invert(1);
+    margin-right: 12px;
+    margin-top: 15px;
+}
+
+.people-icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+
+.text-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+    padding-bottom: 3px;
+}
+
+.general-text {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.general-text > *{
+    margin: 0;
+}
+
+.clock-section, .pin-section, .car-section, .people-section {
+    display: flex;
+
+}
+
+.text-bio {
+    font-size: 15px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: lighter;
+     line-height: 20px;
+     width: 250px;
+}
+.line {
+    display: block;          /* Forces layout rendering */
+  width: 200px;              /* Made slightly thicker for testing */
+  height: 2px;           /* Full vertical length */
+  background-color: white;   /* Temporary bright color to verify visibility */
+    margin: 15px;
+  opacity: 20%;
+}
+.check-icon {
+    filter: invert(1);
+    width: 20px;
+    height: 20px;
+    
+}
+.middlebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(20, 20, 20);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+ 
+}
+
+.vline {
+  display: block;         
+  width: 2px;              
+  height: 400px;          
+  background-color: white;  
+  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  opacity: 20%;
+
+}
+
+.mmiddle > * {
+    margin:0;
+}
+.plan-title {
+     margin-top: 30px;
+    margin-bottom: 15px;
+}
+.plan-bio {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.check-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   margin-left: 35px;
+   margin-bottom: 15px;
+   
+  
+
+}
+
+.check-row > * {
+    margin: 0;
+}
+
+.mmiddle {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    
+  
+}
+
+.middlebox {
+    animation: fade-coming-up-bounce 2s ease-in;
+}
+.direction-button {
+    border: 2px solid white;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    margin-right: 20px;
+    
+}
+.direction-button h2 {
+    font-weight: bold;
+}
+
+.church-map {
+    height: 90%;
+    width: clamp(380px, 30%, 650px);
+    margin-top: 40px;
+    border-radius: 20px;
+    
+}

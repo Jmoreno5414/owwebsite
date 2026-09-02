@@ -1,4 +1,9 @@
 html, body {
+    overflow: hidden;
+}
+
+@import url('https://googleapis.com');
+html, body {
     background-color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
@@ -58,6 +63,15 @@ html, body {
     height: 100%;
     object-fit: cover;
     z-index: -1;   
+    -webkit-mask-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(0,0,0) 15%, rgb(0,0,0) 85%, rgba(0,0,0,0) 90%),
+    linear-gradient(to right,  rgba(0,0,0,0) 0%, rgb(0,0,0) 15%, rgb(0,0,0) 85%, rgba(0,0,0,0) 50%);
+    mask-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(0,0,0) 25%, rgb(0,0,0) 65%, rgba(0,0,0,0) 80%),
+    linear-gradient(to right,  rgba(0,0,0,0) 0%, rgb(0,0,0) 15%, rgb(0,0,0) 85%, rgba(0,0,0,0) 90%);
+    -webkit-mask-composite: destination-in;
+     mask-composite: intersect;
+     filter: blur(2px);
 }
 
 .ow-motto {
@@ -66,7 +80,8 @@ html, body {
     align-items: flex-start;
     flex-direction: column;
     margin-left: 5%;
-    margin-top: 7%;
+    margin-top: 150px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -77,12 +92,12 @@ html, body {
 .ow-motto h2 {
     opacity: 0;
     padding: 10px;
-    font-size: 40px;
+    font-size: 50px;
    
 }
 .ow-motto h3 {
     padding: 5px;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 
@@ -122,26 +137,108 @@ html, body {
     animation: fade-in 1s ease-in 4s forwards;
     font-size: 24px;
 }
+.line {
+    opacity: 0;
+    margin-left: 15px;
+    animation: fade-in 1s ease-in 4s forwards;
+}
 
 .join-us-button {
     opacity: 0;
-    height: 60px;
-    width: 250px;
+    height: 40px;
+    width: 300px;
     margin-left: 15px;
     margin-top: 40px;
-    background-color: rgb(1, 123, 220);
+    background-color: rgb(1, 92, 166);
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 26.5px !important;
+    font-size: 20px !important;
     text-align: center;
     font-weight: bold;
     color: white;
     animation: fade-coming-up-bounce 1s ease-in 4.1s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
-    
+}
+
+.join-button-frame {
+    transition: transform 1s ease, color 0.3s ease;
+}
+
+.join-button-frame:hover {
+    transform: scale(1.1);
 }
 
 .ow-motto a {
     text-decoration: none;
+}
+
+.bottom-section {
+    opacity: 0;
+    background-color: rgb(19, 19, 19);
+    color: rgb(218, 218, 217);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 20px;
+    margin-top: 100px;
+    border: 3px solid rgba(217, 216, 216, .1);
+    border-radius: 2px;
+    animation: fade-coming-up-bounce 2s ease-in 4s forwards;
+
+}
+
+.bottom-section h2 {
+    font-size: 17px;
+}
+.bottom-section h3 {
+    font-size: 14px;
+}
+
+
+.clock-icon{
+    width: 90px;
+    filter: invert(1);
+}
+.pin-icon  {
+    width: 80px;
+    filter: invert(1);
+}
+
+.church-icon {
+    width: 120px;
+    filter: invert(1);
+}
+
+.block-1, .block-2, .block-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertically centers the icon with the text */
+    
+   
+}
+.block-1 > * {
+    margin: 0;
+}
+.block-3 h3 {
+  width: 300px;
+}
+
+.three-desc {
+
+}
+.plan-visit {
+    margin-top: 50px;
+    color:rgb(1, 92, 166);
+    letter-spacing: 1px;
+    font-size: 20px !important;
+}
+.vline {
+    transform: rotate(90deg);
+    width: 50px;
 }
