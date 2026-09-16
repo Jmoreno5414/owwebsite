@@ -50,6 +50,33 @@ html, body {
     }
 }
 
+@keyframes come-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    80% {
+        transform: translateX(2%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes come-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    80% {
+        transform: translateX(-2%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
 
 .background-img {
     opacity: 0; /*  change for edits */
@@ -78,7 +105,7 @@ html, body {
     align-items: flex-start;
     flex-direction: column;
     margin-left: 5%;
-    margin-top: 150px;
+    margin-top: 100px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 
 }
@@ -163,8 +190,12 @@ html, body {
 }
 
 
+
 .join-button-frame {
+    display: inline-block;
+    text-decoration: none;
     transition: transform 1s ease, color 0.3s ease;
+    
 }
 
 .join-button-frame:hover {
@@ -180,7 +211,7 @@ html, body {
 }
 .bottom-sec {
     color: white;
-    animation: fade-coming-up-bounce 2s ease-in 4s forwards;
+    
     background-color: white;
     width: 100%;
     padding-top: 1px;
@@ -190,6 +221,17 @@ html, body {
     
     padding-bottom: 120px;
 }
+
+
+/* <div class="bottom-sec">
+        <div class="bottom-left-block">
+            <p class="bottom-title">WELCOME TO ONE WAY CHRISTIAN CHURCH</p>
+            <h1 class="bottom-title-two">A place to Know God, find freedom, and discover your purpose.</h1>
+            <p class="bottom-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti reiciendis tempora ex impedit? Fuga corrupti tempora architecto eius natus nulla, autem provident quisquam et magnam labore ex quos eum molestiae?</p>
+            <h2 class="join-us-button-2">LEARN MORE ABOUT US →</h2>
+        </div>
+        <img src="images/worship.png" class="bottom-right-image">
+    </div> */
 
 .bottom-left-block > * {
     margin: 0;
@@ -208,7 +250,10 @@ html, body {
 }
 
 .bottom-left-block {
-     margin-left: 50px;
+    margin-left: 50px;
+    animation: come-from-left linear forwards;
+    animation-timeline: view();
+     animation-range: entry 0% entry 100% ;
 }
 
 .bottom-title-two {
@@ -236,6 +281,9 @@ html, body {
     margin-top: 35px;
     margin-left: 100px;
     border-radius: 10px;
+    animation: come-from-right linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100% ;
 }
 
 
