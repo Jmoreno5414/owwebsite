@@ -1,0 +1,60 @@
+@import url('https://googleapis.com');
+
+.footer-top {
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('images/raisinghandsblue.png');
+
+    padding-bottom: 25px;
+    
+}
+
+
+
+.footer-top > * {
+    margin: 0;
+}
+
+.join-us-button-3 {
+    height: 35px;
+    width: 360px;
+    margin-top: 25px;
+    background-color: rgb(1, 112, 202) !important; 
+    border: none !important;
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px !important;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 6px;
+}
+
+.footer-top-title {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.footer-top-desc {
+    font-size: 23px;
+    font-family: 'Montserrat', sans-serif;
+    width: 650px;
+    line-height: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+/* <div class="footer-top">
+        <h2 class="bottom-title">CONNECT WITH US </h2>
+        <h1>We'd love to meet you.</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, distinctio. Lorem ipsum dolor sit amet.</p>
+        <h2 class="join-us-button-3">CONNECT WITH US →</h2>
+    </div> */

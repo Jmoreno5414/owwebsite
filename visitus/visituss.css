@@ -168,12 +168,12 @@ body {
      width: 250px;
 }
 .line {
-    display: block;          /* Forces layout rendering */
-  width: 200px;              /* Made slightly thicker for testing */
-  height: 2px;           /* Full vertical length */
-  background-color: white;   /* Temporary bright color to verify visibility */
+    display: block;          
+    width: 200px;             
+    height: 2px;          
+    background-color: white;   
     margin: 15px;
-  opacity: 20%;
+    opacity: 20%;
 }
 .check-icon {
     filter: invert(1);
@@ -186,8 +186,8 @@ body {
     flex-direction: row;
     justify-content: space-around;
     background-color: rgb(20, 20, 20);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 80px;
 
  
 }
