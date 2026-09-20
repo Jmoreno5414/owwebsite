@@ -162,10 +162,12 @@ body {
 
 .text-bio {
     font-size: 15px;
-     font-family: 'Montserrat', sans-serif;
-     font-weight: lighter;
-     line-height: 20px;
-     width: 250px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    line-height: 20px;
+
+    width: 100%;
+    max-width: 250px;
 }
 .line {
     display: block;          
@@ -184,24 +186,35 @@ body {
 .middlebox {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    background-color: rgb(20, 20, 20);
-    padding-top: 40px;
-    padding-bottom: 80px;
 
- 
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: clamp(20px, 4vw, 70px);
+
+    background-color: rgb(20, 20, 20);
+
+    padding: 40px clamp(25px, 5vw, 80px) 80px;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    animation: fade-coming-up-bounce 2s ease-in;
 }
 
 .vline {
-  display: block;         
-  width: 2px;              
-  height: 400px;          
-  background-color: white;  
-  margin: 10px;
-  margin-left: 50px;
-  margin-right: 50px;
-  opacity: 20%;
+    display: block;
 
+    width: 2px;
+    height: 400px;
+
+    background-color: white;
+
+    margin: 10px 0;
+
+    opacity: 20%;
+
+    flex-shrink: 0;
 }
 
 .mmiddle > * {
@@ -256,9 +269,62 @@ body {
 }
 
 .church-map {
-    height: 90%;
-    width: clamp(380px, 30%, 650px);
+    width: clamp(280px, 30vw, 650px);
+    height: auto;
+
     margin-top: 40px;
     border-radius: 20px;
-    
+
+    object-fit: cover;
+}
+
+@media (max-width: 750px) {
+
+    .church-back {
+        left: 0;
+        width: 100%;
+    }
+
+    .top-text {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .top-text h1 {
+        font-size: 55px;
+    }
+
+    .middlebox {
+        flex-direction: column;
+        align-items: center;
+
+        gap: 30px;
+
+        padding: 40px 25px 60px;
+    }
+
+    .vline {
+        width: 80%;
+        height: 2px;
+
+        margin: 10px auto;
+    }
+
+    .mleft,
+    .mmiddle {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .church-map {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+
+        margin-top: 10px;
+    }
+
+    .text-bio {
+        max-width: 100%;
+    }
 }
