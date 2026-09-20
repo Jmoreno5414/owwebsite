@@ -1,0 +1,172 @@
+body {
+    background-color: black;
+}
+
+
+.top-text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    animation: come-from-left 2s ease-in;
+    padding-bottom: 50px;
+}
+
+.top-text > * {
+    margin: 0;
+}
+
+.top-text h1 {
+    font-size: 105px;
+    
+}
+.top-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    width: 550px;
+    line-height: 30px;
+    text-align: center ;
+}
+
+.church-back {
+    position: absolute;
+    top: 0%;
+    right: 35%;
+    width: 70%;
+    height: 50%;
+    object-fit: cover;
+    z-index: -1;   
+    object-position: 0% 20%;
+
+    -webkit-mask-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(0,0,0) 15%, rgb(0,0,0) 85%, rgba(0,0,0,0) 90%),
+    linear-gradient(to right,  rgba(0,0,0,0) 70%, rgb(0,0,0) 85%, rgb(0,0,0) 85%, rgba(0,0,0,0) 100%);
+    mask-image: 
+    linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgb(0,0,0) 25%, rgb(0,0,0) 65%, rgba(0,0,0,0) 85%),
+    linear-gradient(to right,  rgba(0,0,0,0) 15%, rgb(0,0,0) 35%, rgb(0,0,0) 92%, rgba(0,0,0,0) 100%);
+    -webkit-mask-composite: destination-in;
+     mask-composite: intersect;
+    opacity: 0.6;
+     animation: rise 2s ease-in;
+}
+
+.second-box {
+    padding-top: 25px;
+    border: 0.5px solid rgba(0, 140, 255, 0.6);
+    border-left: none;
+    border-right:none;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.small-title {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    color: rgb(0, 140, 255);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.sco-text {
+    color: white;
+    font-weight: lighter;
+    margin-left: 40px;
+    
+}
+
+.sco-text h3 {
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.sco-text > * {
+    margin: 0;
+}
+
+
+.second-colum-one {
+    display: flex;
+    align-items: center;
+}
+.center-bio {
+    width: 300px;
+}
+
+.church-center-logo {
+    width: 140px;
+}
+.download-image {
+    width: 150px;
+}
+
+.row2images {
+    filter: invert();
+    width: 60px;
+}
+
+.second-column-two {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -15px;
+}
+
+
+
+.list-column-two-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+
+.list-column-two-text > * {
+    margin: 0;
+}
+
+.list-column-two {
+    display: flex;
+    align-items: center;
+    
+}
+.list-colm-h3 {
+    font-size: 20px;
+}
+.list-colm-h4 {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+
+.iphone-image {
+    height: 300px;
+    
+    
+}
+
+
+.second-column-three {
+    display: flex;
+    align-items: center;
+}
+
+.sco-text-three > * {
+    margin: 0;
+
+}
+.three-title {
+    color: white;
+}
+.three-bio {
+    color: white;
+    width: 300px;
+}
