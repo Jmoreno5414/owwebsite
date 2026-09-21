@@ -80,7 +80,7 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    max-width: clamp(200px, 5vw, 440px);
+    max-width: clamp(200px, 55vw, 440px);
     line-height: 25px;
 }
 
