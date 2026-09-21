@@ -161,3 +161,18 @@
     animation: fade-coming-up-bounce 1s ease-in 0.5s forwards;
 }
 
+@media (max-width:750px) {
+   
+    .top-nav-bar {
+       flex-direction: column;
+       align-items: center;
+    }
+   
+    .inner-nav-text {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+   
+    }
+   }

@@ -2,6 +2,61 @@ body {
     background-color: black;
 }
 
+@keyframes come-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    80% {
+        transform: translateX(2%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+@keyframes fade-in {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes come-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    80% {
+        transform: translateX(-2%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes come-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    75% {
+        opacity: 0.8;
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
 
 .top-text {
     color: white;
@@ -9,8 +64,11 @@ body {
     flex-direction: column;
     align-items: center;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-    animation: come-from-left 2s ease-in;
     padding-bottom: 50px;
+}
+
+.top-text-bio {
+    animation:fade-in 1.5s ease-in forwards;
 }
 
 .top-text > * {
@@ -30,6 +88,10 @@ body {
     text-align: center ;
 }
 
+.get-connected-title {
+    animation:fade-in 1.5s ease-in forwards;
+}
+
 .church-back {
     position: absolute;
     top: 0%;
@@ -37,7 +99,7 @@ body {
     width: 70%;
     height: 50%;
     object-fit: cover;
-    z-index: -1;   
+    z-index: -2;   
     object-position: 0% 20%;
 
     -webkit-mask-image: 
@@ -48,7 +110,7 @@ body {
     linear-gradient(to right,  rgba(0,0,0,0) 15%, rgb(0,0,0) 35%, rgb(0,0,0) 92%, rgba(0,0,0,0) 100%);
     -webkit-mask-composite: destination-in;
      mask-composite: intersect;
-    opacity: 0.6;
+    opacity: 0.4;
      animation: rise 2s ease-in;
 }
 
@@ -96,6 +158,8 @@ body {
 .second-colum-one {
     display: flex;
     align-items: center;
+    opacity: 0;
+    animation: come-from-left 1.5s ease-in forwards;
 }
 .center-bio {
     width: 300px;
@@ -127,6 +191,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin-top: -15px;
     margin-left: clamp(15px, 3vw, 45px);
+    opacity: 0;
+    animation: come-up 1.5s ease-in forwards;
 }
 
 
@@ -170,6 +236,8 @@ body {
     display: flex;
     align-items: center;
     color: white;
+    opacity: 0;
+    animation:come-from-right 2s forwards;
 }
 
 .sco-text-three > * {

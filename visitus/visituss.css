@@ -95,7 +95,7 @@ body {
     font-weight: lighter;
     width: 550px;
     line-height: 30px;
-    width: clamp(320px, 1vw, 550px);
+    width: clamp(320px, 55vw, 550px);
 }
 
 .top-text-bio {
