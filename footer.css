@@ -31,7 +31,7 @@
 
 .join-us-button-3 {
     height: 35px;
-    width: 360px;
+    max-width: clamp(250px, 5vw, 360px);
     margin-top: 25px;
     background-color: rgb(1, 112, 202) !important; 
     border: none !important;
@@ -42,18 +42,21 @@
     font-weight: bold;
     color: white;
     padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
     padding-bottom: 6px;
 }
 
 .footer-top-title {
-    font-size: 45px;
+    font-size: clamp(30px, 5vw, 45px);
     font-weight: bolder;
+    text-align: center;
 }
 
 .footer-top-desc {
     font-size: 23px;
     font-family: 'Montserrat', sans-serif;
-    width: 650px;
+    max-width: clamp(300px, 55vw, 750px);
     line-height: 30px;
     margin-top: 20px;
     text-align: center;
@@ -77,6 +80,8 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
+    max-width: clamp(200px, 5vw, 440px);
+    line-height: 25px;
 }
 
 .left-block-foot {
@@ -84,10 +89,8 @@
 
 }
 
-.under-logo-sub {
-    width: 440px;
-    line-height: 25px;
-}
+
+
 
 .quick-links-foot {
     color: white;
@@ -175,7 +178,36 @@
 .floor-sub a {
     margin-left: 15px;
 }
-
+.floor-sub {
+    min-width: 15px;
+}
 .pp-redirect {
     color: rgb(0, 125, 226);
+}
+
+@media (max-width: 750px) {
+    .footer-bottom {
+        flex-direction: column;
+    }
+    .under-logo-sub {
+        text-align: center;
+    }
+    .quick-links-foot {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+   .right-block-bottom {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+   }
+
+   .left-block-foot {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
 }

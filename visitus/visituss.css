@@ -95,6 +95,7 @@ body {
     font-weight: lighter;
     width: 550px;
     line-height: 30px;
+    width: clamp(320px, 1vw, 550px);
 }
 
 .top-text-bio {
@@ -143,7 +144,7 @@ body {
 .text-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
-    font-size: 18px;
+    font-size: clamp(13px, 1vw, 18px);
     padding-bottom: 3px;
 }
 
@@ -232,7 +233,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-   margin-left: 35px;
+   margin-left: clamp(5px, 2vw, 35px);
    margin-bottom: 15px;
    
   

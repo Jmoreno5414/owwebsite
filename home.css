@@ -172,7 +172,7 @@ html, body {
     opacity: 0;
     height: 40px;
     width: 300px;
-    margin-left: 15px;
+    margin-left: clamp(5px, 5vw, 15px);
     margin-top: 40px;
     background-color: rgb(1, 92, 166);
     border: none;
@@ -211,15 +211,18 @@ html, body {
 }
 .bottom-sec {
     color: white;
-    
     background-color: white;
-    width: 100%;
-    padding-top: 1px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    padding-bottom: 120px;
+
+    gap: clamp(30px, 5vw, 100px);
+
+    padding: 1px clamp(20px, 5vw, 80px) 120px;
+
+    box-sizing: border-box;
+    width: 100%;
 }
 
 
@@ -250,15 +253,32 @@ html, body {
 }
 
 .bottom-left-block {
-    margin-left: 50px;
+    margin-left: 0;
     animation: come-from-left linear forwards;
     animation-timeline: view();
-     animation-range: entry 0% entry 100% ;
+    animation-range: entry 0% entry 100% ;
+    flex: 1;
+    max-width: 660px;
+    min-width: 0;
+}
+
+@media (max-width: 750px) {
+    .bottom-sec {
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom-title {
+        text-align: center;
+        width: 250px;
+    }
+    .bottom-title-two {
+        text-align: center;
+    }
 }
 
 .bottom-title-two {
-    font-size: 55px;
-    width: 660px;
+    font-size: clamp(40px, 5vw, 55px);
+    width: clamp(250px, 50vw, 660px);
     color: black;
     margin-top: 10px;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
@@ -268,7 +288,8 @@ html, body {
     color: black;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
-    width: 650px;
+    width: clamp(250px, 40vw, 660px);
+    text-align: center;
     line-height: 30px;
     margin-top: 20px;
 }
@@ -276,10 +297,11 @@ html, body {
 
 .bottom-right-image {
     color: black;
-    width: 600px;
-    height: 350px;
+    width: clamp(300px, 30vw, 650px);
+    height: clamp(200px, 25vw, 350px);
     margin-top: 35px;
-    margin-left: 100px;
+    margin-left: clamp(50px, 5vw, 100px);
+    margin-right: clamp(50px, 5vw, 100px);
     border-radius: 10px;
     animation: come-from-right linear forwards;
     animation-timeline: view();
@@ -289,13 +311,13 @@ html, body {
 
 .join-us-button-2 {
     height: 40px;
-    width: 360px;
+    width: clamp(250px, 35vw, 360px);
     margin-top: 25px;
     background-color: rgb(1, 112, 202) !important; 
     border: none !important;
     border-radius: 3px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px !important;
+    font-size: clamp(15px, 5vw, 20px) !important;
     text-align: center;
     font-weight: bold;
     color: white;

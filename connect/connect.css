@@ -18,14 +18,14 @@ body {
 }
 
 .top-text h1 {
-    font-size: 105px;
+    font-size: clamp(30px, 10vw, 105px);
     
 }
 .top-text h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: lighter;
-    width: 550px;
+    width: clamp(420px, 1vw, 550px);
     line-height: 30px;
     text-align: center ;
 }
@@ -54,7 +54,7 @@ body {
 
 .second-box {
     padding-top: 25px;
-    border: 0.5px solid rgba(0, 140, 255, 0.6);
+    border: 0.5px solid rgba(136, 136, 137, 0.6);
     border-left: none;
     border-right:none;
     padding-bottom: 25px;
@@ -102,21 +102,31 @@ body {
 }
 
 .church-center-logo {
-    width: 140px;
+    width: clamp(100px, 10vw, 140px);
+    margin-left:clamp(10px, 5vw, 20px);
 }
 .download-image {
-    width: 150px;
+    max-width: 150px;
+    margin-right: 15px;
+    margin-top: 15px;
+    
+}
+.downloads {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .row2images {
     filter: invert();
-    width: 60px;
+    width: clamp(30px, 5vw, 60px);
 }
 
 .second-column-two {
     color: white;
     font-family: 'Montserrat', sans-serif;
     margin-top: -15px;
+    margin-left: clamp(15px, 3vw, 45px);
 }
 
 
@@ -138,17 +148,19 @@ body {
     
 }
 .list-colm-h3 {
-    font-size: 20px;
+    font-size: clamp(5px,2vw, 20px);
+    
 }
 .list-colm-h4 {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: clamp(5px,12vw, 14px);
+    margin-bottom: 5px;
 }
 
 
 
 .iphone-image {
-    height: 300px;
+    height: clamp(200px, 45vw, 300px);
     
     
 }
@@ -157,11 +169,17 @@ body {
 .second-column-three {
     display: flex;
     align-items: center;
+    color: white;
 }
 
 .sco-text-three > * {
     margin: 0;
 
+}
+
+
+.ready-to-download {
+    font-weight: bolder;
 }
 .three-title {
     color: white;
@@ -169,4 +187,96 @@ body {
 .three-bio {
     color: white;
     width: 300px;
+}
+
+.third-first-column {
+    color: black;
+    padding-top: 25px;
+    padding-bottom: 150px;
+    margin-left: clamp(5px, 5vw, 25px);
+    margin-right: clamp(5px, 5vw, 25px);
+}
+
+.third-box {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.third-first-column > * {
+    margin:0;
+}
+.line {
+    display: block;          
+    width: 200px;             
+    height: 2px;          
+    background-color: black;   
+    margin: 15px;
+    opacity: 20%;
+}
+
+.instructions-title {
+    font-size: clamp(40px, 5vw, 50px);
+    margin-top: 15px;
+}
+.instructions-bio {
+    max-width: clamp(150px,45vw, 350px);
+    margin-top: 15px;
+
+}
+
+.instruction-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.instruction-image {
+    border-radius: 25px;
+    max-width: clamp(150px, 55vw, 350px);
+    max-height: clamp(100px, 55vw, 300px);
+    margin-top: 25px;
+}
+
+
+.instruction-dio {
+    margin-left: clamp(15px, 5vw, 30px);
+    margin-right: clamp(15px, 5vw, 20px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.instruction-title {
+    text-align: center;
+    font-size: clamp(20px, 5vw, 30px);
+    margin-top: 70px;
+    max-width: clamp(250px, 5vw, 350px);
+}
+
+.instruction-step {
+    margin-top: 20px;
+    max-width: clamp(150px, 25vw, 350px);
+    text-align: center;
+}
+
+
+.change-button {
+  height: 40px; 
+  width: 200px; 
+  background-color: rgb(1, 112, 202) !important; 
+  border: none !important; 
+  border-radius: 3px; 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 20px !important; 
+  font-weight: bold; 
+  color: white; 
+  text-align: center;
+  line-height: 40px; 
+  cursor: pointer;
+  transition: transform 1s ease, color 0.3s ease;
+}
+
+.change-button:hover {
+    transform: scale(1.1);
 }
