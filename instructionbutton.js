@@ -2,11 +2,6 @@
 const image_block = document.querySelector(".instruction-image")
 const images = ["../images/instructionplaceholder1.png", "../images/instructionplaceholder2.png", "../images/instructionplaceholder3.png", "../images/instructionplaceholder4.png"];
 
-
-
-
-
-
 const instruction_title = document.querySelector(".instruction-title")
 
 const instruction_titles = ["Download Church Center", "Find One Way Christian Church", "Sign in or create an account", "Explore and get involved"]
@@ -40,3 +35,5 @@ if (instruction_button && image_block) {
 
     });
 }
+
+// kids rgb(175, 220, 227);

@@ -8,79 +8,92 @@ const button6 = document.querySelector(".lm6");
 
 
 const titlearray = ["KIDS", "STUDENTS", "NEXT GEN", "WORSHIP", "SMALL GROUPS", "I-TEAM"]
-const spanarray = ["Ages: 5-12", "Middle school - College", "Young adults", "", "", ""]
+const spanarray = ["Ages: 5-12", "Middle school - College", "Young adults", "All ages welcome", "Community groups", "Serving team"]
+const images = ["../images/owkids.PNG",
+    "../images/studentminis.jpg",
+    "../images/nextgenlogo.PNG",
+    "../images/worship.png",
+    "../images/smallgroup.png",
+    "../images/placeholder.png"
+]
+
+const description = ["KIDS ipsum dolor sit amet consectetur adipisicing elit. In nisi nulla doloribus voluptatem eveniet quos quisquam voluptatibus magni modi consequuntur a accusamus fuga aliquid dolorum aperiam suscipit veritatis consequatur Kids"
+,"Students Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi nulla doloribus voluptatem eveniet quos quisquam voluptatibus magni modi consequuntur a accusamus fuga aliquid dolorum aperiam suscipit veritatis consequatur"
+,"Next Gen Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi nulla doloribus voluptatem eveniet quos quisquam voluptatibus magni modi consequuntur a accusamus fuga aliquid dolorum aperiam suscipit veritatis consequatur"
+,"Worship Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi nulla doloribus voluptatem eveniet quos quisquam voluptatibus magni modi consequuntur a accusamus fuga aliquid dolorum aperiam suscipit veritatis consequatur"
+,"Small Groups Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi nulla doloribus voluptatem eveniet quos quisquam voluptatibus magni modi consequuntur a accusamus fuga aliquid dolorum aperiam suscipit veritatis consequatur"
+,"I-Team Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi nulla doloribus voluptatem eveniet quos quisquam voluptatibus magni modi consequuntur a accusamus fuga aliquid dolorum aperiam suscipit veritatis consequatur"
+
+];
 
 const loopimages = [""]
 const popupframe = document.querySelector(".pop-up-block")
 const popuptitle = document.querySelector(".pop-up-title")
-const popupdesc = document.querySelector(".pop-up-desc")
+const desc = document.querySelector(".pop-up-desc")
+const popspan = document.querySelector(".pop-up-under-title")
+const poplogo = document.querySelector(".pop-up-logo")
+
+const leftarrow = document.querySelector(".left-arrow")
+const rightarrow = document.querySelector(".right-arrow")
+
+
+let index = 0;
+
+// cards
+
+const card1 = document.querySelector(".card1")
+const card2 = document.querySelector(".card2")
+const card3 = document.querySelector(".card3")
+const card4 = document.querySelector(".card4")
+const card5 = document.querySelector(".card5")
+const card6 = document.querySelector(".card6")
+
+
+const cardarray = [card1, card2, card3, card4, card5, card6]
+
+function updatePopup(currentinx) {
+    index = currentinx;
+    popuptitle.textContent = titlearray[index];
+    desc.textContent = description[index]
+    popspan.textContent = spanarray[index]
+    poplogo.src = images[index];
+    cardarray.forEach(c => {
+            c.classList.remove("active");
+        });
+    cardarray[currentinx].classList.add("active");
+}
+
+if (popupframe) {
+    leftarrow.addEventListener('click', () => {
+        index--
+
+        if (index < 0) {
+            index = 5
+        }
+        updatePopup(index);
+    });
+};
+
+if (popupframe) {
+    rightarrow.addEventListener('click', () => {
+        index++
+        if (index >= titlearray.length ) {
+            index = 0
+        }
+        updatePopup(index);
+
+    });
+};
 
 
 
+cardarray.forEach((card, i) => {
+    card.addEventListener('click', () => {
+        card.classList.add("active");
+        updatePopup(i);
+        index = i;
+
+    });
 
 
-/* <div class="ow-text-block"> 
-                <h2 class="kids-title">KIDS <span>Ages: 5-12</span></h2> 
-                <h3 class="kids-description">asdar jwajajd ajje dnans tbrm bur wak skfk xoao lr was gs aeafd brtgrs</h3> 
-                <button type="button" class="button-reuse lm1"><h2 class="learn-more"> LEARN MORE →</h2> </button>
-            </div> 
-            
-        </div> 
-
-        <!-- Student Block -->
-        <div class="student-block"> 
-            <img src="../images/studentminis.jpg" class="student-logo"> 
-            <div class="student-text-block"> 
-                <h2 class="student-title">STUDENTS <span>Middle school - College</span></h2> 
-                <h3 class="student-description">asdar jwajajd ajje dnans tbrm bur wak skfk xoao lr was gs aeafd brtgrs</h3> 
-                <button type="button" class="button-reuse lm2"><h2 class="learn-more"> LEARN MORE →</h2> </button>
-            </div> 
-
-        </div> 
-
-        <!-- Young Adult Block -->
-        <div class="yadult-block"> 
-            <img src="../images/nextgenlogo.PNG" class="yadult-logo"> 
-            <div class="yadult-text-block"> 
-                <h2 class="yadult-title">NEXT GEN <span>Young adults</span></h2> 
-                <h3 class="yadult-description">asdar jwajajd ajje dnans tbrm bur wak skfk xoao lr was gs aeafd brtgrs</h3> 
-                <button type="button" class="button-reuse lm3"><h2 class="learn-more"> LEARN MORE →</h2> </button>
-            </div> 
-        </div> 
-
-    </div>
-
-<!-- Block 2 -->
-    <div class="bottom-block"> 
-        <div class="kids-block"> 
-            <img src="../images/worship.png" class="ow-kids-logo"> 
-            <div class="ow-text-block"> 
-                <h2 class="kids-title">WORSHIP <span></span></h2> 
-                <h3 class="kids-description">asdar jwajajd ajje dnans tbrm bur wak skfk xoao lr was gs aeafd brtgrs</h3> 
-                <button type="button" class="button-reuse lm4"><h2 class="learn-more"> LEARN MORE →</h2> </button>
-            </div> 
-        </div> 
-
-        <!-- Student Block -->
-        <div class="student-block"> 
-            <img src="../images/smallgroup.png" class="student-logo"> 
-            <div class="student-text-block"> 
-                <h2 class="student-title">SMALL GROUPS <span></span></h2> 
-                <h3 class="student-description">asdar jwajajd ajje dnans tbrm bur wak skfk xoao lr was gs aeafd brtgrs</h3> 
-                <button type="button" class="button-reuse lm5"><h2 class="learn-more"> LEARN MORE →</h2> </button>
-            </div> 
-        </div> 
-
-        <!-- Young Adult Block -->
-        <div class="yadult-block"> 
-            <img src="../images/placeholder.png" class="yadult-logo"> 
-            <div class="yadult-text-block"> 
-                <h2 class="yadult-title">I - TEAM<span></span></h2> 
-                <h3 class="yadult-description">asdar jwajajd ajje dnans tbrm bur wak skfk xoao lr was gs aeafd brtgrs</h3> 
-                <button type="button" class="button-reuse lm6"><h2 class="learn-more"> LEARN MORE →</h2> </button>
-            </div> 
-        </div> 
-    </div>
-
-
- */
+});
