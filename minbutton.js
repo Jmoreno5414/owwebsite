@@ -49,6 +49,9 @@ const card5 = document.querySelector(".card5")
 const card6 = document.querySelector(".card6")
 
 
+
+// Reminder for me, adding the learn more buttons would just need me to get the classes then use updateopup(1) or updatepopup(2)
+
 const cardarray = [card1, card2, card3, card4, card5, card6]
 
 function updatePopup(currentinx) {
