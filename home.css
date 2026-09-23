@@ -105,9 +105,13 @@ html, body {
     align-items: flex-start;
     flex-direction: column;
     margin-left: 5%;
-    margin-top: 100px;
+    margin-top: clamp(100px, 30vw, 160px);
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 
+}
+
+.mot {
+    font-size: clamp(30px, 5vw, 60px);
 }
 
 .ow-motto > * {
@@ -117,12 +121,12 @@ html, body {
 .ow-motto h2 {
     opacity: 0; /*  change for edits */
     padding: 10px;
-    font-size: 50px;
+    
    
 }
 .ow-motto h3 {
     padding: 5px;
-    font-size: 50px;
+    
 }
 
 

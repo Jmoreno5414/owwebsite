@@ -263,6 +263,7 @@ body {
     padding-bottom: 150px;
     margin-left: clamp(5px, 5vw, 25px);
     margin-right: clamp(5px, 5vw, 25px);
+    animation: come-from-left 1s ease-in forwards;
 }
 
 .third-box {
@@ -297,6 +298,7 @@ body {
 .instruction-block {
     display: flex;
     flex-direction: row;
+    animation: fade-in 1s ease-in forwards;
 }
 
 .instruction-image {
