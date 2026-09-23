@@ -81,7 +81,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     margin-top: 25px;
-    animation: rise 2s ease-in;
+    animation: rise 1.5s ease-in;
 }
 
 .top-title > * {
@@ -119,11 +119,11 @@ html, body {
 }
 
 .top-block {
-    animation: come-from-left 2s ease-in forwards;
+    animation: come-from-left 1.5s ease-in forwards;
 }
 
 .bottom-block {
-    animation: come-from-right 2s ease-in forwards;
+    animation: come-from-right 1.5s ease-in forwards;
 }
 
 
@@ -224,14 +224,18 @@ html, body {
     width: 100%; 
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    max-width: clamp(500px, 85vw, 1800px); 
+    max-width: clamp(500px, 85vw, 1500px); 
     z-index: 3; 
-    
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease, opacity 0.25s ease, visibility 0.25s ease;
 }
 
 .pop-up-parent.appear {
-    opacity: 0;
+   transform: translate(-50%, -50%) scale(0.8);
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
+   transition: transform 0.25s ease-in, opacity 0.25s ease-in, linear 0.25s;
 }
 
 

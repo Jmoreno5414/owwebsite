@@ -15,7 +15,7 @@ const images = ["../images/owkids.PNG",
     "../images/worship.png",
     "../images/smallgroup.png",
     "../images/placeholder.png"
-]
+];
 
 const description = ["KIDS ipsum dolor sit amet consectetur adipisicing elit. In nisi nulla doloribus voluptatem eveniet quos quisquam voluptatibus magni modi consequuntur a accusamus fuga aliquid dolorum aperiam suscipit veritatis consequatur Kids"
 ,"Students Lorem ipsum dolor sit amet consectetur adipisicing elit. In nisi nulla doloribus voluptatem eveniet quos quisquam voluptatibus magni modi consequuntur a accusamus fuga aliquid dolorum aperiam suscipit veritatis consequatur"
@@ -26,35 +26,58 @@ const description = ["KIDS ipsum dolor sit amet consectetur adipisicing elit. In
 
 ];
 
-const loopimages = [""]
-const popupframe = document.querySelector(".pop-up-block")
-const popuptitle = document.querySelector(".pop-up-title")
-const desc = document.querySelector(".pop-up-desc")
-const popspan = document.querySelector(".pop-up-under-title")
-const poplogo = document.querySelector(".pop-up-logo")
+const loopimages = [""];
+const popupframe = document.querySelector(".pop-up-block");
+const popuptitle = document.querySelector(".pop-up-title");
+const desc = document.querySelector(".pop-up-desc");
+const popspan = document.querySelector(".pop-up-under-title");
+const poplogo = document.querySelector(".pop-up-logo");
 
-const leftarrow = document.querySelector(".left-arrow")
-const rightarrow = document.querySelector(".right-arrow")
+const leftarrow = document.querySelector(".left-arrow");
+const rightarrow = document.querySelector(".right-arrow");
 
 
 let index = 0;
 
 // cards
 
-const card1 = document.querySelector(".card1")
-const card2 = document.querySelector(".card2")
-const card3 = document.querySelector(".card3")
-const card4 = document.querySelector(".card4")
-const card5 = document.querySelector(".card5")
-const card6 = document.querySelector(".card6")
+const card1 = document.querySelector(".card1");
+const card2 = document.querySelector(".card2");
+const card3 = document.querySelector(".card3");
+const card4 = document.querySelector(".card4");
+const card5 = document.querySelector(".card5");
+const card6 = document.querySelector(".card6");
 
 
-const xsymbol = document.querySelector(".x-sign")
+
+// Boxes
+const box1 = document.querySelector(".lm1");
+const box2 = document.querySelector(".lm2");
+const box3 = document.querySelector(".lm3");
+const box4 = document.querySelector(".lm4");
+const box5 = document.querySelector(".lm5");
+const box6 = document.querySelector(".lm6");
+const xsymbol = document.querySelector(".x-sign");
+
+const popupparent = document.querySelector(".pop-up-parent");
+const totalboxes = [box1, box2, box3, box4, box5, box6]
 
 
-const popupparent = document.querySelector(".pop-up-parent")
+totalboxes.forEach((box, i) => {
+    box.addEventListener('click', () => {
+        popupparent.classList.remove("appear");
+        updatePopup(i);
+    });
+})
+;
+// box1.addEventListener('click', () => {
+//     popupparent.classList.remove("appear");
+// })
+
+
+
 xsymbol.addEventListener('click', () => {
-    popupparent.classList.toggle("appear")
+    popupparent.classList.add("appear");
 })
 
 
