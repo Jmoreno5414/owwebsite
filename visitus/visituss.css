@@ -1,4 +1,7 @@
 @import url('https://googleapis.com');
+
+
+
 @keyframes come-from-left {
     0% {
         opacity: 0;
@@ -47,6 +50,10 @@
 }
 body {
     background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .church-back {
@@ -77,8 +84,9 @@ body {
     margin-left: 70px;
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 55px;
     animation: come-from-left 2s ease-in;
+    min-height: 30vh; 
 }
 
 .top-text > * {
@@ -86,9 +94,11 @@ body {
 }
 
 .top-text h1 {
+    
     font-size: 105px;
     
 }
+
 .top-text h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -185,36 +195,27 @@ body {
     
 }
 .middlebox {
+    width: 100%;
+    min-height: 50vh;
     display: flex;
     flex-direction: row;
-
     justify-content: center;
     align-items: flex-start;
-
     gap: clamp(20px, 4vw, 70px);
-
     background-color: rgb(20, 20, 20);
-
     padding: 40px clamp(25px, 5vw, 80px) 80px;
-
     box-sizing: border-box;
     width: 100%;
-
     animation: fade-coming-up-bounce 2s ease-in;
 }
 
 .vline {
     display: block;
-
     width: 2px;
     height: 400px;
-
     background-color: white;
-
     margin: 10px 0;
-
     opacity: 20%;
-
     flex-shrink: 0;
 }
 

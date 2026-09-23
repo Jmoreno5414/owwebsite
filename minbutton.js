@@ -65,8 +65,8 @@ const totalboxes = [box1, box2, box3, box4, box5, box6]
 
 totalboxes.forEach((box, i) => {
     box.addEventListener('click', () => {
-        popupparent.classList.remove("appear");
         updatePopup(i);
+        popupparent.classList.remove("appear");
     });
 })
 ;
