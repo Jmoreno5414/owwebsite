@@ -7,7 +7,7 @@ const button6 = document.querySelector(".lm6");
 
 
 
-const titlearray = ["KIDS", "STUDENTS", "NEXT GEN", "WORSHIP", "SMALL GROUPS", "I-TEAM"]
+const titlearray = ["KIDS", "STUDENTS", "NEXT GEN", "WORSHIP", "SMALL GROUPS", "DREAM-TEAM"]
 const spanarray = ["Ages: 5-12", "Middle school - College", "Young adults", "All ages welcome", "Community groups", "Serving team"]
 const images = ["../images/owkids.PNG",
     "../images/studentminis.jpg",
@@ -47,6 +47,15 @@ const card3 = document.querySelector(".card3")
 const card4 = document.querySelector(".card4")
 const card5 = document.querySelector(".card5")
 const card6 = document.querySelector(".card6")
+
+
+const xsymbol = document.querySelector(".x-sign")
+
+
+const popupparent = document.querySelector(".pop-up-parent")
+xsymbol.addEventListener('click', () => {
+    popupparent.classList.toggle("appear")
+})
 
 
 

@@ -227,7 +227,14 @@ html, body {
     transform: translate(-50%, -50%);
     max-width: clamp(500px, 85vw, 1800px); 
     z-index: 3; 
+    
 }
+
+.pop-up-parent.appear {
+    opacity: 0;
+}
+
+
 .pop-up-block {    
     text-shadow: 1px 2px 2px rgba(138, 134, 134, 0.9); 
     display: flex;     
@@ -238,14 +245,18 @@ html, body {
 .pop-up-left {
     position: relative;
     display: inline-block;
+
+    flex: 0 0 72%;
+    box-sizing: border-box;
 }
 .pop-up-title{
     margin: 0;
-    width: 400px;
+     width: clamp(150px, 20vw, 400px);
     text-align: center;
-    font-size: clamp(40px, 10vw, 50px);
+    font-size: clamp(15px, 4vw, 50px);
     color: white;
-    margin-top: 200px;
+    margin-top: clamp(100px, 10vw, 200px);
+    
 }
 
 .pop-up-under-title {
@@ -255,35 +266,46 @@ html, body {
     text-align: center;
 }
 .pop-up-title-container {
-    position: absolute;
-    bottom: 15px;
-    left: 5px;
+
+    
+    text-align: center;
     z-index: 10;
 }
 .pop-up-title span {
-    font-size: 17px;
+    font-size: clamp(15px, 5vw, 17px);
     font-weight: 300;
 }
 .pop-up-desc {
-    width: clamp(350px, 75vw, 400px);
+    width: clamp(150px, 20vw, 400px);
     text-align: center;
     margin-top: 50px;
     color: rgb(255, 255, 255);
-    margin-right: clamp(15px, 35vw, 35px);
+    
     line-height: 25px;
     font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
+    font-size: 19px;
 
 }
 .pop-up-right-upper {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-right: 25px;
+  
+   
 }
+
+.pop-up-right {
+    flex: 0 0 10%;
+    box-sizing: border-box;
+  
+}
+
+
 .pop-up-logo {
     width: 100%;
-    width: clamp(700px);
+    max-width: 100%;
+   
     height: clamp(300px, 80vw, 660px);
     object-fit: cover;
     display: block;
@@ -401,4 +423,40 @@ html, body {
 
 .right-arrow {
     right: 30px;
+}
+
+
+.x-sign {
+  position: absolute; 
+  cursor: pointer;
+  top: 4%;
+  right: 2.5%;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  transition:transform 0.25s ease;
+}
+
+.x-sign:hover {
+    transform: scale(1.1);
+    
+}
+.bar-1, .bar-2 {
+  position: absolute; 
+  background-color: white; 
+  width: 3px; 
+  height: 35px; 
+  border-radius: 2px; 
+  top: 50%;       
+  left: 50%;  
+
+    
+}
+
+.bar-1 {
+    transform: translate(-50%, -50%) rotate(45deg); 
+}
+
+.bar-2 {
+    transform: translate(-50%, -50%) rotate(-45deg); 
 }
